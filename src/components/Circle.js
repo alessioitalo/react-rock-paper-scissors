@@ -2,8 +2,9 @@ import styles from './Circle.module.css';
 
 const Circle = ({ type, onClick }) => {
   const playerChoice = () => {
-    onClick();
+    onClick(type);
   };
+  
   return (
     <div onClick={playerChoice} className={`${type} ${styles.circle}`}></div>
   );
