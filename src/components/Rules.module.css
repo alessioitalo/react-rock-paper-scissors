@@ -1,0 +1,21 @@
+.rules {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rules div {
+  width: 10%;
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rules div:hover{
+    background-color: hsl(217, 16%, 45%);
+    color: hsl(237, 49%, 15%);
+    border: 2px solid white;
+}

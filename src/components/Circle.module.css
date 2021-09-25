@@ -1,0 +1,11 @@
+.circle{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    margin: 2rem;
+    cursor: pointer;
+}

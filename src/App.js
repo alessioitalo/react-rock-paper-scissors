@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Scoreboard from './components/Scoreboards';
 import Container from './components/Container';
 import Circle from './components/Circle';
+import Rules from './components/Rules';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -9,11 +10,13 @@ function App() {
     <div className='App'>
       <Scoreboard score={score} />
       <Container>
-        <Circle />
-        <Circle />
-        <Circle />
+        <span>
+          <Circle type='paper' />
+          <Circle type='scissors' />
+        </span>
+        <Circle type='rock' />
       </Container>
-      <button>RULES</button>
+      <Rules />
     </div>
   );
 }

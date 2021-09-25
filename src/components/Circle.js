@@ -1,5 +1,7 @@
-const Circle = () => {
-  return <div>A Circle</div>;
+import styles from './Circle.module.css';
+
+const Circle = ({type}) => {
+  return <div className={`${type} ${styles.circle}`}></div>;
 };
 
 export default Circle;
