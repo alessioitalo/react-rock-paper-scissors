@@ -1,0 +1,32 @@
+.scoreboard {
+  width: 80%;
+  border: 4px solid hsl(217, 16%, 45%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreboard ul {
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+}
+
+.scoreboard,
+.score {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.score {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(229, 25%, 31%);
+  width: 30%;
+}
+
+.points {
+  color: hsl(229, 64%, 46%);
+  font-size: 3rem;
+}

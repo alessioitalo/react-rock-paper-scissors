@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Scoreboard from './components/Scoreboards';
+import Container from './components/Container';
+import Circle from './components/Circle';
 
 function App() {
+  const [score, setScore] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Scoreboard score={score} />
+      <Container>
+        <Circle />
+        <Circle />
+        <Circle />
+      </Container>
+      <button>RULES</button>
     </div>
   );
 }
