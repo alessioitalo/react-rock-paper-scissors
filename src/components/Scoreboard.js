@@ -6,7 +6,7 @@ const Scoreboard = ({ score }) => {
       <ul>
         <li>ROCK</li>
         <li>PAPER</li>
-        <li>SCISSOR</li>
+        <li>SCISSORS</li>
       </ul>
       <div className={styles.score}>
         SCORE

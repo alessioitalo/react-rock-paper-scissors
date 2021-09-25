@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 60vh;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: hsl(229, 25%, 31%);
+    margin: 2rem 4rem;
+    animation: invisible 0.5s linear infinite;
+}
+
+.result{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid hsl(217, 16%, 45%);
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+}
+
+
+
+@keyframes invisible {
+    from {
+        transform: scale(0.6)
+    }
+    to{
+        transform: scale(1.1)
+    }
+}

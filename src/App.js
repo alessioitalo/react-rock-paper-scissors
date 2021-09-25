@@ -4,6 +4,7 @@ import Container from './components/Container';
 import Circle from './components/Circle';
 import Rules from './components/Rules';
 import Modal from './components/Modal';
+import Result from './components/Result';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -26,10 +27,11 @@ function App() {
     console.log('house has chosen..' + houseChoice);
   };
 
-  // useEffect(()=>{
-  //   console.log('player choice is...' + playerChoice)
-
-  // }, [playerChoice])
+  const resetHandler = () => {
+    setPlaying(false);
+    setPlayerChoice(false);
+    setHouseChoice(false);
+  };
 
   return (
     <div className='App'>
@@ -51,12 +53,7 @@ function App() {
           <Circle type='rock' onClick={playerChoiceHandler} />
         </Container>
       )}
-      {playing && (
-        <div>
-          <Circle type={playerChoice} />
-          <Circle type={houseChoice} />
-        </div>
-      )}
+      {playing && <Result player={playerChoice} house={houseChoice} reset={resetHandler} />}
       <Rules onClick={showRulesHandler} />
     </div>
   );

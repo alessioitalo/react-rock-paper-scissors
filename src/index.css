@@ -48,7 +48,7 @@ ul {
     inset 0px 1rem 0 0 hsla(217, 16%, 45%, 0.3);
 }
 
-.backdrop{
+.backdrop {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
@@ -58,7 +58,9 @@ ul {
   z-index: 1;
 }
 
-.top, .left, .right{
+.top,
+.left,
+.right {
   background-color: hsla(237, 49%, 15%, 0.5);
   width: 33%;
   height: 1rem;
@@ -66,21 +68,64 @@ ul {
   z-index: -1;
 }
 
-.top{
+.top {
   top: 50%;
   left: 33%;
 }
 
-.left{
+.left {
   transform: rotate(55deg);
   top: 90%;
   left: 20%;
 }
 
-.right{
+.right {
   top: 90%;
   right: 20%;
-  transform: rotate(-55deg)
+  transform: rotate(-55deg);
+}
+
+.button{
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover{
+  background-color: hsl(217, 16%, 45%);
+  color: hsl(237, 49%, 15%);
+  border: 2px solid white;
+}
+
+.test {
+  /* box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09),
+    0px 5px 0px 4rem hsla(0, 100%, 100%, 0.04),
+    0px 5px 0px 6rem hsla(0, 100%, 100%, 0.009); */
+    animation: shadows 1s linear;
+}
+
+@keyframes shadows {
+  0% {
+    box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09);
+  }
+  15% {
+    box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09),
+      0px 5px 0px 4rem hsla(0, 100%, 100%, 0.04);
+  }
+  30% {
+    box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09),
+      0px 5px 0px 4rem hsla(0, 100%, 100%, 0.04),
+      0px 5px 0px 6rem hsla(0, 100%, 100%, 0.009);
+  }
+  100% {
+    box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09),
+      0px 5px 0px 4rem hsla(0, 100%, 100%, 0.04),
+      0px 5px 0px 6rem hsla(0, 100%, 100%, 0.009);
+  }
 }
 
 @media (max-width: 500px) {
