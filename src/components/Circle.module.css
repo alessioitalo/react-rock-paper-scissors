@@ -6,8 +6,12 @@
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: center;
-  margin: 2rem;
+  margin: 2rem 4rem;
   cursor: pointer;
+}
+
+.circle:hover{
+  transform: scale(1.1)
 }
 
 @media (max-width: 500px){

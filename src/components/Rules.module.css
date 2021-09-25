@@ -19,3 +19,10 @@
     color: hsl(237, 49%, 15%);
     border: 2px solid white;
 }
+
+@media (max-width: 500px){
+  .rules{
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
