@@ -3,11 +3,19 @@ import Scoreboard from './components/Scoreboard';
 import Container from './components/Container';
 import Circle from './components/Circle';
 import Rules from './components/Rules';
+import Modal from './components/Modal'
 
 function App() {
   const [score, setScore] = useState(0);
+  const [showRules, setShowRules] = useState(false)
+
+  const showRulesHandler = ()=>{
+    setShowRules(!showRules) 
+  }
+
   return (
     <div className='App'>
+    {showRules && <div className="backdrop"><Modal onClick={showRulesHandler}/></div>}
       <Scoreboard score={score} />
       <Container>
         <span>
@@ -16,7 +24,7 @@ function App() {
         </span>
         <Circle type='rock' />
       </Container>
-      <Rules />
+      <Rules onClick={showRulesHandler}/>
     </div>
   );
 }

@@ -48,6 +48,16 @@ ul {
     inset 0px 1rem 0 0 hsla(217, 16%, 45%, 0.3);
 }
 
+.backdrop{
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 @media (max-width: 500px) {
   .scissors,
   .rock,
