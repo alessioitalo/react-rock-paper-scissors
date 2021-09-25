@@ -1,11 +1,19 @@
-.circle{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: center;
-    margin: 2rem;
-    cursor: pointer;
+.circle {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 500px){
+    .circle{
+        width: 40vw;
+        height: 40vw;
+        margin: 1rem;
+    }
 }

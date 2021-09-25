@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Scoreboard from './components/Scoreboards';
+import Scoreboard from './components/Scoreboard';
 import Container from './components/Container';
 import Circle from './components/Circle';
 import Rules from './components/Rules';

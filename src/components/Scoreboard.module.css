@@ -1,5 +1,5 @@
 .scoreboard {
-  width: 80%;
+  width: 60%;
   border: 2px solid hsl(217, 16%, 45%);
   display: flex;
   justify-content: space-between;
@@ -32,8 +32,8 @@
   font-size: 3rem;
 }
 
-@media (min-width: 1366px){
-    .scoreboard{
-        width: 60%;
-    }
+@media (max-width: 500px){
+  .scoreboard{
+    width: 80%;
+  }
 }
