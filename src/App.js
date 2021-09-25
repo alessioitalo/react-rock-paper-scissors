@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Scoreboard from './components/Scoreboard';
 import Container from './components/Container';
 import Circle from './components/Circle';
@@ -7,11 +7,17 @@ import Modal from './components/Modal';
 import Result from './components/Result';
 
 function App() {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(localStorage.getItem('score') || 0);
   const [showRules, setShowRules] = useState(false);
   const [playerChoice, setPlayerChoice] = useState();
   const [houseChoice, setHouseChoice] = useState();
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    if (score !== 0) {
+      localStorage.setItem('score', score);
+    }
+  }, [score]);
 
   const showRulesHandler = () => {
     setShowRules(!showRules);
@@ -24,7 +30,6 @@ function App() {
       houseChoices[Math.floor(Math.random() * houseChoices.length)]
     );
     setPlaying(true);
-    console.log('house has chosen..' + houseChoice);
   };
 
   const resetHandler = () => {
@@ -53,7 +58,15 @@ function App() {
           <Circle type='rock' onClick={playerChoiceHandler} />
         </Container>
       )}
-      {playing && <Result player={playerChoice} house={houseChoice} reset={resetHandler} />}
+      {playing && (
+        <Result
+          player={playerChoice}
+          house={houseChoice}
+          reset={resetHandler}
+          setScore={setScore}
+          score={score}
+        />
+      )}
       <Rules onClick={showRulesHandler} />
     </div>
   );

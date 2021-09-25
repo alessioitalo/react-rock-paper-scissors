@@ -1,21 +1,38 @@
-import { useEffect, useState } from 'react';
-import gameEngine from '../game-engine';
+import { useEffect, useState, useCallback } from 'react';
 import Circle from './Circle';
 import styles from './Result.module.css';
 
-const Result = ({ player, house, reset }) => {
+const Result = ({ player, house, reset, setScore, score }) => {
   const [housVisible, setHouseVisible] = useState(false);
   const [resultVisible, setResultVisible] = useState(false);
-  const [result, setResult] = useState()
+  const [result, setResult] = useState();
+
+  const gameEngine = useCallback(() => {
+    if (player === house) {
+      setResult("IT'S A DRAW");
+    } else if (
+      (player === 'rock' && house === 'scissors') ||
+      (player === 'scissors' && house === 'paper') ||
+      (player === 'paper' && house === 'rock')
+    ) {
+      setResult('YOU WON');
+      setScore((actualScore) => actualScore + 1);
+    } else {
+      setResult('YOU LOST');
+      setScore(0);
+    }
+  }, [player, house, setScore]);
 
   useEffect(() => {
+    console.log('effect fired');
     setTimeout(() => {
       setHouseVisible(true);
     }, 1500);
     setTimeout(() => {
       setResultVisible(true);
+      gameEngine();
     }, 2000);
-  });
+  }, [gameEngine]);
 
   return (
     <div className={styles.container}>
@@ -25,7 +42,7 @@ const Result = ({ player, house, reset }) => {
       </div>
       {resultVisible && (
         <div className={styles.result}>
-          YOU WIN{' '}
+          {result}
           <div onClick={reset} className='button'>
             PLAY AGAIN
           </div>
