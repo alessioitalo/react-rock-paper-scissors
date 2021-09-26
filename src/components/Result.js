@@ -3,7 +3,7 @@ import Circle from './Circle';
 import styles from './Result.module.css';
 
 const Result = ({ player, house, reset, setScore, score }) => {
-  const [housVisible, setHouseVisible] = useState(false);
+  const [houseVisible, setHouseVisible] = useState(false);
   const [resultVisible, setResultVisible] = useState(false);
   const [result, setResult] = useState();
 
@@ -37,7 +37,7 @@ const Result = ({ player, house, reset, setScore, score }) => {
     <div className={styles.container}>
       <div>
         YOU PICKED
-        <Circle type={player} onClick={reset} />
+        <Circle type={player} onClick={reset} animatedShadow={`${result === 'YOU WON' ? 'shadow' : ''}`}/>
       </div>
       {resultVisible && (
         <div className={styles.result}>
@@ -47,10 +47,10 @@ const Result = ({ player, house, reset, setScore, score }) => {
           </div>
         </div>
       )}
-      <div>
+      <div >
         THE HOUSE PICKED
-        {housVisible ? (
-          <Circle type={house} onClick={reset} />
+        {houseVisible ? (
+          <Circle type={house} onClick={reset} animatedShadow={`${result === 'YOU LOST' ? 'shadow' : ''}`}/>
         ) : (
           <div className={styles.invisible}></div>
         )}

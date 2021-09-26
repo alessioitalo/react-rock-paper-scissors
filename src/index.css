@@ -102,7 +102,7 @@ ul {
 }
 
 .shadow {
-    animation: shadows 1s linear;
+    animation: shadows 1.5s linear forwards;
 }
 
 @keyframes shadows {
