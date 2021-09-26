@@ -7,7 +7,7 @@ import Modal from './components/Modal';
 import Result from './components/Result';
 
 function App() {
-  const [score, setScore] = useState(localStorage.getItem('score') || 0);
+  const [score, setScore] = useState(+localStorage.getItem('score') || 0);
   const [showRules, setShowRules] = useState(false);
   const [playerChoice, setPlayerChoice] = useState();
   const [houseChoice, setHouseChoice] = useState();

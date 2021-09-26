@@ -1,50 +1,68 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 60vh;
-    font-size: 2.5rem;
-    padding-top: 2rem;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  font-size: 2.5rem;
+  padding-top: 2rem;
 }
 
-.container div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.invisible{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    background-color: hsl(229, 25%, 31%);
-    margin: 2rem 4rem;
-    animation: invisible 0.5s linear infinite;
+.invisible {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: hsl(229, 25%, 31%);
+  margin: 2rem 4rem;
+  animation: invisible 0.5s linear infinite;
 }
 
-.result{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.result {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.button{
-    cursor: pointer;
-    font-size: 1rem;
-    border: 2px solid hsl(217, 16%, 45%);
-    padding: 0.5rem 3rem;
-    border-radius: 10px;
+.button {
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid hsl(217, 16%, 45%);
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
 }
-
-
 
 @keyframes invisible {
-    from {
-        transform: scale(0.6)
-    }
-    to{
-        transform: scale(1.1)
-    }
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .result {
+    order: 4;
+    height: 20%;
+    font-size: 2.5rem;
+  }
+
+  .invisible {
+    width: 40vw;
+    height: 40vw;
+    margin: 2rem 0;
+  }
 }

@@ -9,9 +9,9 @@
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 600px){
   .rules{
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }

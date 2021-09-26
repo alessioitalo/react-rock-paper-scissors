@@ -24,7 +24,6 @@ const Result = ({ player, house, reset, setScore, score }) => {
   }, [player, house, setScore]);
 
   useEffect(() => {
-    console.log('effect fired');
     setTimeout(() => {
       setHouseVisible(true);
     }, 1500);

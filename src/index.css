@@ -101,10 +101,7 @@ ul {
   border: 2px solid white;
 }
 
-.test {
-  /* box-shadow: 0px 5px 0px 2rem hsla(0, 100%, 100%, 0.09),
-    0px 5px 0px 4rem hsla(0, 100%, 100%, 0.04),
-    0px 5px 0px 6rem hsla(0, 100%, 100%, 0.009); */
+.shadow {
     animation: shadows 1s linear;
 }
 
@@ -128,11 +125,10 @@ ul {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .scissors,
   .rock,
   .paper {
-    /* border: 1rem; */
     border-width: 1rem;
   }
 
@@ -149,5 +145,8 @@ ul {
   .rock {
     box-shadow: 0px 0.5rem 0 0 hsl(349, 71%, 52%),
       inset 0px 0.5rem 0 0 hsla(217, 16%, 45%, 0.3);
+  }
+  .button{
+    font-size: 1rem;
   }
 }
