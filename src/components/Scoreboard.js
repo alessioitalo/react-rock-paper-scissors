@@ -1,13 +1,12 @@
 import styles from './Scoreboard.module.css';
+import logo from '../images/logo.svg';
 
 const Scoreboard = ({ score }) => {
   return (
     <div className={styles.scoreboard}>
-      <ul>
-        <li>ROCK</li>
-        <li>PAPER</li>
-        <li>SCISSORS</li>
-      </ul>
+      <div className={styles.logo}>
+        <img src={logo} alt='logo' />
+      </div>
       <div className={styles.score}>
         SCORE
         <div className={styles.points}>{score}</div>

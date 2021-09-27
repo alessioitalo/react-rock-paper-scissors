@@ -55,7 +55,9 @@ function App() {
             <Circle type='paper' onClick={playerChoiceHandler} />
             <Circle type='scissors' onClick={playerChoiceHandler} />
           </span>
+          <span>
           <Circle type='rock' onClick={playerChoiceHandler} />
+          </span>
         </Container>
       )}
       {playing && (

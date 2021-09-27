@@ -21,11 +21,7 @@ body {
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
   color: white;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  min-width: 275px;
 }
 
 .paper {
@@ -57,33 +53,6 @@ ul {
   top: 0;
   left: 0;
   z-index: 1;
-}
-
-.top,
-.left,
-.right {
-  background-color: hsla(237, 49%, 15%, 0.5);
-  width: 33%;
-  height: 1rem;
-  position: absolute;
-  z-index: -1;
-}
-
-.top {
-  top: 50%;
-  left: 33%;
-}
-
-.left {
-  transform: rotate(55deg);
-  top: 90%;
-  left: 20%;
-}
-
-.right {
-  top: 90%;
-  right: 20%;
-  transform: rotate(-55deg);
 }
 
 .button{

@@ -1,18 +1,18 @@
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
 }
 .container span{
     width: 100%;
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 

@@ -3,14 +3,12 @@
   border: 2px solid hsl(217, 16%, 45%);
   display: flex;
   justify-content: space-between;
-  /* padding: 1rem; */
+  align-items: flex-end;
+  padding: 1rem;
 }
 
-.scoreboard ul {
-  font-size: 2rem;
-  line-height: 1.5rem;
-  position: relative;
-  padding: 0 1rem;
+.logo{
+  width: 50%;
 }
 
 .scoreboard,
@@ -18,17 +16,17 @@
   border-radius: 10px;
 }
 
-.score {
+
+.score{
+  width: 30%;
+  height: 100%;
+  text-align: center;
   background-color: white;
+  color: hsl(229, 64%, 46%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: hsl(229, 64%, 46%);
-  width: 6rem;
-  height: 6rem;
-  position: relative;
-  margin: 1rem;
+  justify-content: space-evenly;
 }
 
 .points {
@@ -41,10 +39,11 @@
     width: 80%;
   }
 
-  .scoreboard ul {
-    font-size: 5vw;
-    margin: 0;
-    position: relative;
-    margin: auto 0;
+  .logo{
+    width: 25%;
+  }
+
+  .logo img{
+    width: 100px;
   }
 }
