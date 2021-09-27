@@ -37,7 +37,7 @@ const Result = ({ player, house, reset, setScore, score }) => {
     <div className={styles.container}>
       <div>
         YOU PICKED
-        <Circle type={player} onClick={reset} animatedShadow={`${result === 'YOU WON' ? 'shadow' : ''}`}/>
+        <Circle type={player} onClick={reset} animatedShadow={`${result === 'YOU WON' ? 'shadow' : null}`}/>
       </div>
       {resultVisible && (
         <div className={styles.result}>
@@ -50,7 +50,7 @@ const Result = ({ player, house, reset, setScore, score }) => {
       <div >
         THE HOUSE PICKED
         {houseVisible ? (
-          <Circle type={house} onClick={reset} animatedShadow={`${result === 'YOU LOST' ? 'shadow' : ''}`}/>
+          <Circle type={house} onClick={reset} animatedShadow={`${result === 'YOU LOST' ? 'shadow' : null}`}/>
         ) : (
           <div className={styles.invisible}></div>
         )}
